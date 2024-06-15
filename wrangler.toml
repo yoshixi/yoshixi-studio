@@ -1,9 +1,0 @@
-[site]
-bucket = ".output/public"
-entry-point = ".output"
-
-[build]
-command = "NITRO_PRESET=cloudflare npm run build"
-
-[build.upload]
-format = "service-worker"

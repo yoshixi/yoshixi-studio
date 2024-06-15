@@ -4,6 +4,7 @@ export default defineNuxtConfig({
       autoSubfolderIndex: false,
     },
   },
+  ssr: true,
   devtools: { enabled: true },
   modules: [
     "@nuxt/ui",
