@@ -1,4 +1,9 @@
 export default defineNuxtConfig({
+  nitro: {
+    prerender: {
+      autoSubfolderIndex: false,
+    },
+  },
   devtools: { enabled: true },
   modules: [
     "@nuxt/ui",
@@ -8,7 +13,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxt/content",
     "@nuxthq/studio",
-    "@vueuse/nuxt"
+    "@vueuse/nuxt",
   ],
   ui: {
     icons: ["heroicons", "lucide"],
