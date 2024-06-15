@@ -23,6 +23,7 @@
 const { data: articles } = await useAsyncData("articles-home", () =>
   queryContent("/articles")
     .sort({ published: -1 })
+    .where({ language: "en" })
     .limit(3)
     .only(["title", "description", "published", "slug", "_path"])
     .find()
