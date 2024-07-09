@@ -18,6 +18,7 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxthq/studio",
     "@vueuse/nuxt",
+    "nuxt-gtag",
   ],
   ui: {
     icons: ["heroicons", "lucide"],
@@ -48,5 +49,8 @@ export default defineNuxtConfig({
     families: {
       Inter: [400, 500, 600, 700, 800, 900],
     },
+  },
+  gtag: {
+    id: "G-DFT3MRQ0NB",
   },
 });
