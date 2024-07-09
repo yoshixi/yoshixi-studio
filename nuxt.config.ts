@@ -1,4 +1,7 @@
 export default defineNuxtConfig({
+  devServer: {
+    port: 8000,
+  },
   nitro: {
     prerender: {
       autoSubfolderIndex: false,
@@ -22,6 +25,10 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: "page", mode: "out-in" },
     head: {
+      charset: "utf-16",
+      viewport: "width=device-width",
+      title: "My App",
+      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.png" }],
       htmlAttrs: {
         lang: "en",
         class: "h-full",

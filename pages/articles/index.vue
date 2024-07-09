@@ -10,14 +10,16 @@
 </template>
 
 <script setup>
-const description =
-  "All of my long-form thoughts on programming, user interfaces, product design, and more, collected in chronological order.";
+const description = "";
 useSeoMeta({
-  title: "Articles | Fayaz Ahmed",
+  title: "Articles | Yoshiki Masubuchi",
   description,
 });
 
 const { data: articles } = await useAsyncData("all-articles", () =>
-  queryContent("/articles").sort({ published: -1 }).find()
+  queryContent("/articles")
+    .where({ published: { $exists: true } })
+    .sort({ published: -1 })
+    .find()
 );
 </script>
